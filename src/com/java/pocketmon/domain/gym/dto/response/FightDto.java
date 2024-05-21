@@ -1,9 +1,9 @@
-package com.java.pocketmon.domain.gym.dto;
+package com.java.pocketmon.domain.gym.dto.response;
 
 import com.java.pocketmon.domain.gym.model.AttackPoint;
 import com.java.pocketmon.domain.gym.model.Gym;
 
-public class ResponseFightDto {
+public class FightDto {
     private boolean isAttack;
     private boolean isSuccess;
     private AttackPoint myAttackPoint;
@@ -11,7 +11,7 @@ public class ResponseFightDto {
     private int myRemainPower;
     private int oppRemainPower;
 
-    public ResponseFightDto(Gym gym, boolean isSuccess, AttackPoint myAttackPoint, AttackPoint oppAttackPoint){
+    public FightDto(Gym gym, boolean isSuccess, AttackPoint myAttackPoint, AttackPoint oppAttackPoint){
         this.isAttack = gym.isMyTurn();
         this.isSuccess = isSuccess;
         this.myAttackPoint = myAttackPoint;

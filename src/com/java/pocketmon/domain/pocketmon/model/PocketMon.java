@@ -3,7 +3,7 @@ package com.java.pocketmon.domain.pocketmon.model;
 import com.java.pocketmon.domain.pocketmon.constant.Detail;
 import com.java.pocketmon.domain.pocketmon.constant.ExceptionMessage;
 import com.java.pocketmon.domain.pocketmon.constant.PocketMonInfo;
-import com.java.pocketmon.domain.pocketmon.dto.ResponseInfoDto;
+import com.java.pocketmon.domain.pocketmon.dto.response.PocketMonInfoDto;
 
 public class PocketMon {
     private String name;
@@ -45,8 +45,8 @@ public class PocketMon {
         return myPriority < oppPriority && oppPriority - myPriority == 1;
     }
 
-    public ResponseInfoDto getInfo(){
-        return new ResponseInfoDto(this);
+    public PocketMonInfoDto getInfo(){
+        return new PocketMonInfoDto(this);
     }
 
     public String getName() {

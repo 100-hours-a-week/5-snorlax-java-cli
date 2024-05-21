@@ -1,8 +1,8 @@
 package com.java.pocketmon.domain.gym.model;
 
 import com.java.pocketmon.domain.gym.constant.FightResult;
-import com.java.pocketmon.domain.gym.dto.FightResultDto;
-import com.java.pocketmon.domain.gym.dto.ResponseFightDto;
+import com.java.pocketmon.domain.gym.dto.response.FightResultDto;
+import com.java.pocketmon.domain.gym.dto.response.FightDto;
 import com.java.pocketmon.domain.pocketmon.model.firesoongi.FireSoongE;
 import com.java.pocketmon.domain.pocketmon.model.mobugi.Mobugi;
 import com.java.pocketmon.domain.pocketmon.model.pangdori.PangDori;
@@ -25,7 +25,7 @@ public class Gym {
         setDamage();
     }
 
-    public ResponseFightDto fight(AttackPoint attackPoint){
+    public FightDto fight(AttackPoint attackPoint){
         AttackPoint oppAttackPoint = randomAttackPoint();
         boolean isSuccess = (isMyTurn && attackPoint != oppAttackPoint) || (!isMyTurn && attackPoint == oppAttackPoint);
 
@@ -36,7 +36,7 @@ public class Gym {
                 myPocketMon.getDamage(oppAttack);
             }
         }
-        return new ResponseFightDto(this, isSuccess, attackPoint, oppAttackPoint);
+        return new FightDto(this, isSuccess, attackPoint, oppAttackPoint);
     }
 
     public boolean isEnd(){

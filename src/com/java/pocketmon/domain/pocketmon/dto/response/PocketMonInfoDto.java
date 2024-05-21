@@ -1,10 +1,10 @@
-package com.java.pocketmon.domain.pocketmon.dto;
+package com.java.pocketmon.domain.pocketmon.dto.response;
 
 import com.java.pocketmon.domain.pocketmon.constant.Detail;
 import com.java.pocketmon.domain.pocketmon.constant.PocketMonInfo;
 import com.java.pocketmon.domain.pocketmon.model.PocketMon;
 
-public class ResponseInfoDto {
+public class PocketMonInfoDto {
     private String image;
     private String name;
     private int exp;
@@ -12,7 +12,7 @@ public class ResponseInfoDto {
     private int performanceCnt;
     private Detail detail;
 
-    public ResponseInfoDto(PocketMon pocketMon){
+    public PocketMonInfoDto(PocketMon pocketMon){
         this.image = PocketMonInfo.getByName(pocketMon.getName()).getShapeCode();
         this.name = pocketMon.getName();
         this.exp = pocketMon.getExp();

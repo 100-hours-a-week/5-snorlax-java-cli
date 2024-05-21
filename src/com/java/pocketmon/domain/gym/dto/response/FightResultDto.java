@@ -1,4 +1,4 @@
-package com.java.pocketmon.domain.gym.dto;
+package com.java.pocketmon.domain.gym.dto.response;
 
 public class FightResultDto {
     private boolean isWinner;
