@@ -1,4 +1,4 @@
-package com.java.pocketmon.domain.gym.model;
+package com.java.pocketmon.domain.gym.constant;
 
 public enum AttackPoint {
     HEAD, BODY, LEG

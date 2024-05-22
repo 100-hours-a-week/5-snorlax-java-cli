@@ -1,9 +1,10 @@
 package com.java.pocketmon.domain.gym.model;
 
+import com.java.pocketmon.domain.gym.constant.AttackPoint;
 import com.java.pocketmon.domain.gym.constant.FightResult;
 import com.java.pocketmon.domain.gym.dto.response.FightResultDto;
 import com.java.pocketmon.domain.gym.dto.response.FightDto;
-import com.java.pocketmon.domain.pocketmon.model.firesoongi.FireSoongE;
+import com.java.pocketmon.domain.pocketmon.model.firesoonge.FireSoongE;
 import com.java.pocketmon.domain.pocketmon.model.mobugi.Mobugi;
 import com.java.pocketmon.domain.pocketmon.model.pangdori.PangDori;
 import com.java.pocketmon.domain.pocketmon.model.PocketMon;

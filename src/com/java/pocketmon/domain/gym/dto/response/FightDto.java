@@ -1,6 +1,6 @@
 package com.java.pocketmon.domain.gym.dto.response;
 
-import com.java.pocketmon.domain.gym.model.AttackPoint;
+import com.java.pocketmon.domain.gym.constant.AttackPoint;
 import com.java.pocketmon.domain.gym.model.Gym;
 
 public class FightDto {
@@ -20,6 +20,27 @@ public class FightDto {
         this.oppRemainPower = gym.getOppPocketMon().getPower();
     }
 
+    public boolean isAttack() {
+        return isAttack;
+    }
 
+    public boolean isSuccess() {
+        return isSuccess;
+    }
 
+    public AttackPoint getMyAttackPoint() {
+        return myAttackPoint;
+    }
+
+    public AttackPoint getOppAttackPoint() {
+        return oppAttackPoint;
+    }
+
+    public int getMyRemainPower() {
+        return myRemainPower;
+    }
+
+    public int getOppRemainPower() {
+        return oppRemainPower;
+    }
 }
