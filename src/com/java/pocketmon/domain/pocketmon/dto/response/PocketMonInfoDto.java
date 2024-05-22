@@ -13,7 +13,7 @@ public class PocketMonInfoDto {
     private Detail detail;
 
     public PocketMonInfoDto(PocketMon pocketMon){
-        this.image = PocketMonInfo.getByName(pocketMon.getName()).getShapeCode();
+        this.image = PocketMonInfo.getByName(pocketMon.getDetail().getName()).getShapeCode();
         this.name = pocketMon.getName();
         this.exp = pocketMon.getExp();
         this.power = pocketMon.getPower();
