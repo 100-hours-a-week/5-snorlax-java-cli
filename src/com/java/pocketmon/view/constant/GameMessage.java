@@ -21,7 +21,7 @@ public class GameMessage {
         + "#$$$$$,~~:~:;--$$$$$$$$$$$$$-$$$$$$$$$$$$=-.***!:$$$$$#\n"
         + "#$$$$$,*$;:$$$$$$$$$$$$$$$$$ ,$$$$$$$$$$$$$-$$$$:=$$$$#\n"
         + "#$$$$$$$$$$$$$$$$$$$$$$$$$$$=$$$$$$$$$$$$$$$$$$$$$$$$$#\n"+
-        "1 : 모부기 2 : 불꽃숭이 : 팽도리\n"
+        "1 : 모부기 2 : 불꽃숭이 3: 팽도리\n"
         + "숫자를 입력하면 자세한 정보를 확인할 수 있습니다.";
     public static final String POCKETMON_DETAIL = "이름 : %s, 타입 : %s, 색 : %s, 키 : %f m, 몸무게 : %f kg 입니다.\n"+
         "1: 분양하기 2: 취소";
@@ -31,15 +31,18 @@ public class GameMessage {
     public static final String SELECT_PRODUCT = "안녕하세요 필요한 물건이 있으신가요?\n"
         + "구매할 물건을 선택해주세요.\n"
         + "보유자산 : %dp\n"
-        + "1. 간식 100p 2. 체력회복제(30p) 300p 4. 나가기";
-
+        + "1. 간식 100p 2. 포켓몬 볼 200p 3. 나가기";
+    public static final String INPUT_PRODUCT_CNT = "수량을 입력해주세요. 취소할 경우 exit를 입력하세요";
     public static final String SELECT_GYM_MENU = "1. 대련하기 2. 나가기\n";
-    public static final String SELECT_ATTACK_POINT = "%s 위치를 선택해주세요.\n";
+    public static final String SELECT_ATTACK_POINT = "%s 위치를 선택해주세요. (숫자 입력)\n"+
+        "1. 머리 2. 몸통 3. 다리";
 
 
     ////////
 
     public static final String COMPLETE_ADOPT_POCKETMON = "[%s]는 [%s]의 포켓몬으로 등록되었습니다. 대련을 통해 성장시켜주세요.\n";
+    public static final String COMPLETE_BUY = "결제가 완료되었습니다. 감사합니다.";
+    public static final String NOT_COMPLETE_BUY = "보유 자산이 부족하여 구매할 수 없습니다.";
 
     public static final String WELCOME_GYM = "안녕하세요 랜덤 몬스터와 펫을 대련시킬 수 있는 체육관입니다.\n"
         + "공격과 방어의 순서로 진행되며 체력이 모두 소진되면 패배하게 됩니다. \n"
