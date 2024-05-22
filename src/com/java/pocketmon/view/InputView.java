@@ -2,6 +2,7 @@ package com.java.pocketmon.view;
 
 import static com.java.pocketmon.view.constant.GameMessage.INPUT_PLAYER_NAME;
 import static com.java.pocketmon.view.constant.GameMessage.INPUT_POCKETMON_NAME;
+import static com.java.pocketmon.view.constant.GameMessage.INPUT_PRODUCT_CNT;
 import static com.java.pocketmon.view.constant.GameMessage.POCKETMON_DETAIL;
 import static com.java.pocketmon.view.constant.GameMessage.SELECT_ATTACK_POINT;
 import static com.java.pocketmon.view.constant.GameMessage.SELECT_GYM_MENU;
@@ -46,6 +47,11 @@ public class InputView {
 
     public static String buyProduct() throws IOException {
         println(String.format(SELECT_PRODUCT, ApplicationContext.getPlayer().getPoint()));
+        return br.readLine();
+    }
+
+    public static String inputProductCnt() throws IOException {
+        println(INPUT_PRODUCT_CNT);
         return br.readLine();
     }
 
