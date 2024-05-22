@@ -4,6 +4,10 @@ import com.java.pocketmon.domain.pocketmon.constant.Detail;
 import com.java.pocketmon.domain.pocketmon.constant.ExceptionMessage;
 import com.java.pocketmon.domain.pocketmon.constant.PocketMonInfo;
 import com.java.pocketmon.domain.pocketmon.dto.response.PocketMonInfoDto;
+import com.java.pocketmon.domain.pocketmon.model.firesoonge.FireSoongE;
+import com.java.pocketmon.domain.pocketmon.model.mobugi.Mobugi;
+import com.java.pocketmon.domain.pocketmon.model.pangdori.PangDori;
+import com.java.pocketmon.util.ApplicationContext;
 
 public class PocketMon {
     private String name;
@@ -13,8 +17,18 @@ public class PocketMon {
     private Detail detail;
 
     public PocketMon(String name){
-        this.name = name;
-        this.power = 100;
+        setName(name);
+        this.power = 1000;
+    }
+
+    public static PocketMon valueOf(String name){
+        if(name.equals("모부기")){
+            return new Mobugi(name);
+        }else if(name.equals("불꽃숭이")){
+            return new FireSoongE(name);
+        }else {
+            return new PangDori(name);
+        }
     }
 
     public String performance() {
@@ -49,6 +63,15 @@ public class PocketMon {
         return new PocketMonInfoDto(this);
     }
 
+    public void updateStatus(int exp){
+        this.exp += exp;
+        this.power = 1000;
+    }
+
+    public boolean isMaxExp(){
+        return exp >= 1000;
+    }
+
     public String getName() {
         return name;
     }
@@ -71,6 +94,11 @@ public class PocketMon {
 
     public void setDetail(Detail detail) {
         this.detail = detail;
+    }
+
+    public void setName(String name) {
+        ApplicationContext.setPocketMonName(name);
+        this.name = name;
     }
 
     public PocketMon evolve(){
