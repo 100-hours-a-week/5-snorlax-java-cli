@@ -1,11 +1,12 @@
 package com.java.pocketmon.domain.pocketmon.model.pangdori;
 
 import com.java.pocketmon.domain.pocketmon.constant.Detail;
+import com.java.pocketmon.domain.pocketmon.model.PocketMon;
 
 public class SuperPangDori extends PangDori{
 
-    public SuperPangDori(String name) {
-        super(name);
+    public SuperPangDori(PocketMon pocketMon) {
+        super(pocketMon.getName());
         setDetail(Detail.SUPER_PANGDORI);
     }
 }
