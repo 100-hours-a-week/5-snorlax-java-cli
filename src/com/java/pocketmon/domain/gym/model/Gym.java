@@ -37,6 +37,7 @@ public class Gym {
                 myPocketMon.getDamage(oppAttack);
             }
         }
+        isMyTurn = !isMyTurn;
         return new FightDto(this, isSuccess, attackPoint, oppAttackPoint);
     }
 
@@ -45,7 +46,7 @@ public class Gym {
     }
 
     public FightResultDto getResult(){
-        if(myPocketMon.getPower() == 0){
+        if(oppPocketMon.getPower() == 0){
             return new FightResultDto(true, FightResult.WINNER.getPoint(), FightResult.WINNER.getExp());
         }
         return new FightResultDto(false, FightResult.LOSER.getPoint(), FightResult.LOSER.getExp());
@@ -57,7 +58,10 @@ public class Gym {
     }
 
     private void setDamage(){
-        if(myPocketMon.isAdventageous(oppPocketMon)){
+        if(myPocketMon.getDetail().getType().equals(oppPocketMon.getDetail().getType())) {
+            myAttack = 300;
+            oppAttack = 300;
+        }else if(myPocketMon.isAdventageous(oppPocketMon)){
             myAttack = 350;
             oppAttack = 200;
         }else {
