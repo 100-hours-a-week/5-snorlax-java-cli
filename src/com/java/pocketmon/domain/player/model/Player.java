@@ -49,4 +49,11 @@ public class Player {
         return true;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getPoint() {
+        return point;
+    }
 }
