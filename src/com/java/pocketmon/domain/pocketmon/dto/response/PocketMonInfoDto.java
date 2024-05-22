@@ -21,6 +21,18 @@ public class PocketMonInfoDto {
         this.detail = pocketMon.getDetail();
     }
 
+    @Override
+    public String toString() {
+        return "포켓몬 정보{" +
+            "image='" + image + '\'' +
+            ", name='" + name + '\'' +
+            ", exp=" + exp +
+            ", power=" + power +
+            ", performanceCnt=" + performanceCnt +
+            ", detail=" + detail +
+            '}';
+    }
+
     public String getImage() {
         return image;
     }

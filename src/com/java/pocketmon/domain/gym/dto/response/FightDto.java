@@ -12,7 +12,7 @@ public class FightDto {
     private int oppRemainPower;
 
     public FightDto(Gym gym, boolean isSuccess, AttackPoint myAttackPoint, AttackPoint oppAttackPoint){
-        this.isAttack = gym.isMyTurn();
+        this.isAttack = !gym.isMyTurn();
         this.isSuccess = isSuccess;
         this.myAttackPoint = myAttackPoint;
         this.oppAttackPoint = oppAttackPoint;
