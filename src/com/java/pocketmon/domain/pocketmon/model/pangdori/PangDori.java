@@ -9,4 +9,10 @@ public class PangDori extends PocketMon {
         super(name);
         setDetail(Detail.PANGDORI);
     }
+
+
+    @Override
+    public PocketMon evolve() {
+        return new SuperPangDori(this);
+    }
 }

@@ -10,4 +10,8 @@ public class Mobugi extends PocketMon {
         setDetail(Detail.MOBUGI);
     }
 
+    @Override
+    public PocketMon evolve() {
+        return new SuperMobugi(this);
+    }
 }

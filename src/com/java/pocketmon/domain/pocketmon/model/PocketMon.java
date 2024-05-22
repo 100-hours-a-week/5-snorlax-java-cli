@@ -72,4 +72,8 @@ public class PocketMon {
     public void setDetail(Detail detail) {
         this.detail = detail;
     }
+
+    public PocketMon evolve(){
+        return this;
+    }
 }
