@@ -1,7 +1,9 @@
 package com.java.pocketmon.domain.player.model;
 
 import com.java.pocketmon.domain.laboratory.model.Order;
+import com.java.pocketmon.domain.player.dto.PlayerInfoDto;
 import com.java.pocketmon.domain.pocketmon.model.PocketMon;
+import com.java.pocketmon.util.ApplicationContext;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +17,7 @@ public class Player {
         this.name = name;
         this.point = 1000;
         products = new HashMap<>();
+        ApplicationContext.setPlayer(this);
     }
 
     public boolean registerPet(PocketMon pocketMon){
@@ -26,12 +29,8 @@ public class Player {
         return  true;
     }
 
-    public void updateFightResult(){
-
-    }
-
     public boolean buyProduct(Order order){
-        if(point < order.getPrice()){
+        if(point < order.getPrice() * order.getCnt()){
             return false;
         }
 
@@ -49,11 +48,27 @@ public class Player {
         return true;
     }
 
+    public PlayerInfoDto getInfo(){
+        return new PlayerInfoDto(name, point, pocketMon.getName());
+    }
+
+    public void savePoint(int point){
+        this.point += point;
+    }
+
     public String getName() {
         return name;
     }
 
     public int getPoint() {
         return point;
+    }
+
+    public PocketMon getPocketMon() {
+        return pocketMon;
+    }
+
+    public void setPocketMon(PocketMon pocketMon) {
+        this.pocketMon = pocketMon;
     }
 }
