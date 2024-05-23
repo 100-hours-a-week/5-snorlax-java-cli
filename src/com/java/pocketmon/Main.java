@@ -23,7 +23,7 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
         init();
-        main();
+        mainMenu();
     }
 
     private static void init() throws Exception{
@@ -31,7 +31,7 @@ public class Main {
         selectPocketMon();
     }
 
-    private static void main() throws Exception{
+    private static void mainMenu() throws Exception{
         while(true){
             int menu = Integer.parseInt(InputView.selectMainMenu());
             if(menu == 1){
