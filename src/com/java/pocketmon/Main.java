@@ -52,7 +52,7 @@ public class Main {
     }
 
     private static void changePocketMon() {
-        player.setPocketMon(player.getPocketMon().evolve());
+        player.registerPet(player.getPocketMon().evolve());
         OutputView.printEvolve(player.getPocketMon());
     }
 
@@ -103,7 +103,7 @@ public class Main {
         while(true){
             int num = Integer.parseInt(InputView.selectPocketMon());
             if(InputView.confirmPocketMon(Detail.getByNum(num))){
-                player.setPocketMon(PocketMon.valueOf(Detail.getByNum(num).getName()));
+                player.registerPet(PocketMon.valueOf(Detail.getByNum(num).getName()));
                 break;
             }
         }

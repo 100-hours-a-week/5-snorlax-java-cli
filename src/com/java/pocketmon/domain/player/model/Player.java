@@ -68,7 +68,4 @@ public class Player {
         return pocketMon;
     }
 
-    public void setPocketMon(PocketMon pocketMon) {
-        this.pocketMon = pocketMon;
-    }
 }
