@@ -21,10 +21,6 @@ public class Player {
     }
 
     public boolean registerPet(PocketMon pocketMon){
-        if(pocketMon != null){
-            return false;
-        }
-
         this.pocketMon = pocketMon;
         return  true;
     }
