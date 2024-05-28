@@ -9,7 +9,7 @@ import com.java.pocketmon.domain.pocketmon.model.mobugi.Mobugi;
 import com.java.pocketmon.domain.pocketmon.model.pangdori.PangDori;
 import com.java.pocketmon.util.ApplicationContext;
 
-public class PocketMon {
+public abstract class PocketMon {
     private String name;
     private int exp;
     private int power;
